@@ -25,12 +25,15 @@ namespace VISTA
             InitializeComponent();
             dgvGestionarUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             ActualizarGrilla();
+            //columna de clave no visible en la grilla de usuarios para que no se muestre la clave
+
         }
 
         private void ActualizarGrilla()
         {
             dgvGestionarUsuarios.DataSource = null;
             dgvGestionarUsuarios.DataSource = ControladoraSeguridad.Instancia.RecuperarUsuarios();
+            dgvGestionarUsuarios.Columns["Clave"].Visible = false;
 
         }
 
