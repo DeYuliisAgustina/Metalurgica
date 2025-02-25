@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Analiticas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Analiticas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MetallonIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MetallonIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Historial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Historial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Proveedores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proveedores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CrearNotaCompra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrearNotaCompra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Productos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Productos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CrearProductos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrearProductos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Compras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Compras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ventas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ventas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plantillaNotaVenta" xml:space="preserve">
+    <value>lo mismo que hiciste recien para este html:
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table border="1" width="100%" cellpadding="10"&gt;
+        &lt;tr&gt;
+            &lt;td align="center"&gt;
+                &lt;h2&gt;Métallon s.r.l&lt;/h2&gt;
+                &lt;h3&gt;NOTA DE VENTA N° @NroNotaVenta&lt;/h3&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;table border="1" width="100%" cellpadding="10"&gt;
+        &lt;tr&gt;
+            &lt;td width="50%"&gt;
+                &lt;h4&gt;Datos de la Nota de Venta&lt;/h4&gt;
+                &lt;table border="1" width="100%" cellpadding="5"&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;NotaVentaId:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@NotaVentaId&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;Fecha:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@Fecha&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;Medio de Pago:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@tipoMedioPago&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+            &lt;td width="50%"&gt;
+                &lt;h4&gt;Datos del Cliente&lt;/h4&gt;
+                &lt;table border="1" width="100%" cellpadding="5"&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;ClienteId:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@ClienteId&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;Nombre:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@NombreyApellido&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;DNI:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@DNI&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;Razón Social:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@RazonSocial&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;h4&gt;Detalles Nota Venta&lt;/h4&gt;
+    &lt;table border="1" width="100%" cellpadding="5"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;DetalleNotaVentaId&lt;/th&gt;
+            &lt;th&gt;Producto&lt;/th&gt;
+            &lt;th&gt;Cantidad&lt;/th&gt;
+            &lt;th&gt;Precio Unit.&lt;/th&gt;
+            &lt;th&gt;Subtotal&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;@DetalleNotaVentaId&lt;/td&gt;
+            &lt;td&gt;@Nombre&lt;/td&gt;
+            &lt;td&gt;@Cantidad&lt;/td&gt;
+            &lt;td&gt;@PrecioUnitario&lt;/td&gt;
+            &lt;td&gt;@Subtotal&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="plantillaNotaCompra" xml:space="preserve">
+    <value>haceme esta plantilla d nota de compra mas linda:
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table border="1" width="100%" cellpadding="10"&gt;
+        &lt;tr&gt;
+            &lt;td align="center"&gt;
+                &lt;h2&gt;Métallon s.r.l&lt;/h2&gt;
+                &lt;h3&gt;NOTA DE Compra N° @NroNotaCompra&lt;/h3&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;table border="1" width="100%" cellpadding="10"&gt;
+        &lt;tr&gt;
+            &lt;td width="50%"&gt;
+                &lt;h4&gt;Datos de la Nota de Compra&lt;/h4&gt;
+                &lt;table border="1" width="100%" cellpadding="5"&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;NotaCompraId:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@NotaCompraId&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;Fecha:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@Fecha&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;Medio de Pago:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@tipoMedioPago&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+            &lt;td width="50%"&gt;
+                &lt;h4&gt;Datos del Proveedor&lt;/h4&gt;
+                &lt;table border="1" width="100%" cellpadding="5"&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;ProveedorId:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@ProveedorId&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;Nombre:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@NombreyApellido&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;DNI:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@DNI&lt;/td&gt;
+                    &lt;/tr&gt;
+                        &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;Razón Social:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@RazonSocial&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;strong&gt;CUIT:&lt;/strong&gt;&lt;/td&gt;
+                        &lt;td&gt;@CUIT&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;h4&gt;Detalles Nota Venta&lt;/h4&gt;
+    &lt;table border="1" width="100%" cellpadding="5"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;DetalleNotaCompraId&lt;/th&gt;
+            &lt;th&gt;Producto&lt;/th&gt;
+            &lt;th&gt;Cantidad&lt;/th&gt;
+            &lt;th&gt;Precio Unit.&lt;/th&gt;
+            &lt;th&gt;Subtotal&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;@DetalleNotaCompraId&lt;/td&gt;
+            &lt;td&gt;@Nombre&lt;/td&gt;
+            &lt;td&gt;@Cantidad&lt;/td&gt;
+            &lt;td&gt;@PrecioUnitario&lt;/td&gt;
+            &lt;td&gt;@Subtotal&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="plantillaAuditoriaSesion" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;Reporte de Auditorías de Sesión&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #2d4054;
+        }
+        td, th {
+            padding: 10px;
+        }
+        th {
+            background-color: #2d4054;
+            color: white;
+        }
+        .header {
+            background-color: #2d4054;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .header h3 {
+            margin: 10px 0 0 0;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .section-title {
+            background-color: #4a6484;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+        .info-row td:first-child {
+            font-weight: bold;
+            width: 30%;
+            background-color: #f5f5f5;
+        }
+        .data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .data-table th {
+            text-align: left;
+        }
+        .data-section {
+            margin-bottom: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;td class="header"&gt;
+                &lt;h2&gt;Métallon s.r.l&lt;/h2&gt;
+                &lt;h3&gt;REPORTE DE AUDITORÍA DE SESIONES&lt;/h3&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+    &lt;div class="data-section"&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;td colspan="2" class="section-title"&gt;Información del Reporte&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="info-row"&gt;
+                &lt;td&gt;Fecha de Generación:&lt;/td&gt;
+                &lt;td&gt;@FechaGeneracion&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="info-row"&gt;
+                &lt;td&gt;Total de Registros:&lt;/td&gt;
+                &lt;td&gt;@TotalRegistros&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;div class="data-section"&gt;
+        &lt;table class="data-table"&gt;
+            &lt;tr&gt;
+                &lt;td colspan="4" class="section-title"&gt;Detalle de Auditorías&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th&gt;ID Auditoría&lt;/th&gt;
+                &lt;th&gt;Usuario&lt;/th&gt;
+                &lt;th&gt;Fecha Inicio&lt;/th&gt;
+                &lt;th&gt;Fecha Fin&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;@AuditoriaId&lt;/td&gt;
+                &lt;td&gt;@NombreUsuario&lt;/td&gt;
+                &lt;td&gt;@FechaInicio&lt;/td&gt;
+                &lt;td&gt;@FechaFin&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;div style="text-align: right; font-size: 12px; color: #666; margin-top: 20px;"&gt;
+        &lt;p&gt;Documento generado automáticamente por el sistema&lt;/p&gt;
+        &lt;p&gt;Métallon s.r.l - Sistema de Gestión&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="plantillaAuditoriaClientes" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+    &lt;title&gt;Reporte de Auditoría de Clientes&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table.border {
+            border-collapse: collapse;
+        }
+        table.border th {
+            padding: 5px;
+            margin: 0;
+            text-align: center;
+            border: 1px solid black;
+            background-color: #2c3e50;
+            color: white;
+        }
+        table.border td {
+            padding: 5px;
+            margin: 0;
+            border: 1px solid black;
+        }
+        .title {
+            text-align: center;
+            color: #2c3e50;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="title"&gt;
+        &lt;h1&gt;Métallon s.r.l&lt;/h1&gt;
+        &lt;h2&gt;REPORTE DE AUDITORÍA DE CLIENTES&lt;/h2&gt;
+    &lt;/div&gt;
+
+    &lt;table style="width:100%"&gt;
+        &lt;tr&gt;
+            &lt;td style="width:50%"&gt;
+                &lt;strong&gt;Fecha de Generación:&lt;/strong&gt; @FechaGeneracion
+            &lt;/td&gt;
+            &lt;td style="width:50%" align="right"&gt;
+                &lt;strong&gt;Total de Registros:&lt;/strong&gt; @TotalRegistros
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+    &lt;br /&gt;
+
+    &lt;table class="border" style="width:100%;"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;ID Auditoria&lt;/th&gt;
+                &lt;th&gt;Usuario&lt;/th&gt;
+                &lt;th&gt;Nombre y Apellido&lt;/th&gt;
+                &lt;th&gt;DNI&lt;/th&gt;
+                &lt;th&gt;Razón Social&lt;/th&gt;
+                &lt;th&gt;Fecha Auditoría&lt;/th&gt;
+                &lt;th&gt;Tipo Movimiento&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;@AuditoriaClienteId&lt;/td&gt;
+                &lt;td&gt;@NombreUsuario&lt;/td&gt;
+                &lt;td&gt;@NombreyApellido&lt;/td&gt;
+                &lt;td&gt;@DNI&lt;/td&gt;
+                &lt;td&gt;@RazonSocial&lt;/td&gt;
+                &lt;td&gt;@FechaAuditoria&lt;/td&gt;
+                &lt;td&gt;@TipoMovimiento&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;div style="text-align: right; margin-top: 20px;"&gt;
+        &lt;p&gt;Documento generado automáticamente por el sistema&lt;/p&gt;
+        &lt;p&gt;Métallon s.r.l - Sistema de Gestión&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+</root>
