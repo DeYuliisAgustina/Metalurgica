@@ -56,7 +56,7 @@ namespace Controladora
             try
             {
                 var listaNotasVentas = Context.Instancia.NotasVenta.ToList().AsReadOnly();
-                var notasVentaPorCliente = listaNotasVentas.Where(s => s.ClienteId == cliente.ClienteId);
+                var notasVentaPorCliente = listaNotasVentas.Where(s => s.Cliente.NombreyApellido == cliente.NombreyApellido);
                 return notasVentaPorCliente.Count();
             }
             catch (Exception)

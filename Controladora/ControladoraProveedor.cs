@@ -41,7 +41,7 @@ namespace Controladora
             try
             {
                 var listaNotasCompras = Context.Instancia.NotasCompra.ToList().AsReadOnly(); // Recupero todos los tickets 
-                var notasCompraPorProveedor = listaNotasCompras.Where(s => s.Proveedor.ProveedorId == proveedor.ProveedorId); // Recupero los tickets que tiene asignados el tecnico
+                var notasCompraPorProveedor = listaNotasCompras.Where(s => s.Proveedor.NombreyApellido == proveedor.NombreyApellido); // Recupero los tickets que tiene asignados el tecnico
                 return notasCompraPorProveedor.Count();
             }
             catch (Exception)
