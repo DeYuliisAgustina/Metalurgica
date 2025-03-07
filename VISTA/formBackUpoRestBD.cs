@@ -272,7 +272,5 @@ namespace VISTA
         {
             this.Close();
         }
-
-
     }
 }

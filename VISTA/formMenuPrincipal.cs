@@ -80,6 +80,7 @@ namespace VISTA
             btnProveedores.Visible = false;
             btnClientes.Visible = false;
             btnAnaliticas.Visible = false;
+            btnAuditoriaClientes.Visible = false;
         }
 
         private void MostrarTodosLosBotones()
@@ -93,6 +94,7 @@ namespace VISTA
             btnProveedores.Visible = true;
             btnClientes.Visible = true;
             btnAnaliticas.Visible = true;
+            btnAuditoriaClientes.Visible = true;
         }
 
         private void MostrarBotonSegunAccion(string nombreAccion)
@@ -107,7 +109,9 @@ namespace VISTA
                 case "Ver Listado Productos": btnStock.Visible = true; break;
                 case "Ver Listado Proveedores": btnProveedores.Visible = true; break;
                 case "Ver Listado Clientes": btnClientes.Visible = true; break;
+                case "Ver Gráfico Productos": btnAnaliticas.Visible = true; break;
                 case "Ver Analíticas": btnAnaliticas.Visible = true; break;
+                case "Auditoria Cliente": btnAuditoriaClientes.Visible = true; break;
             }
         }
         #endregion
