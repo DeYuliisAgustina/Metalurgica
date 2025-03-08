@@ -29,23 +29,25 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnRefrescarGrilla = new Button();
             btnCerrar = new FontAwesome.Sharp.IconButton();
             label3 = new Label();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
-            btnBuscarFiltrado = new FontAwesome.Sharp.IconButton();
+            cmbNombreUsuarios = new ComboBox();
+            btnBuscar = new FontAwesome.Sharp.IconButton();
             cmbCargarEstadoUsuario = new ComboBox();
             label4 = new Label();
             cmbCargarGrupos = new ComboBox();
             label1 = new Label();
             label6 = new Label();
-            txtNombreUsuario = new TextBox();
             dgvGestionarUsuarios = new DataGridView();
             btnEliminarUsuario = new Button();
             btnModificarUsuario = new Button();
             btnAgregarUsuario = new Button();
             btnResetearUsuario = new Button();
+            btnSalir = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
@@ -55,6 +57,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(45, 64, 84);
+            panel1.Controls.Add(btnRefrescarGrilla);
             panel1.Controls.Add(btnCerrar);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -63,6 +66,20 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(829, 104);
             panel1.TabIndex = 1;
+            // 
+            // btnRefrescarGrilla
+            // 
+            btnRefrescarGrilla.BackColor = Color.Black;
+            btnRefrescarGrilla.FlatStyle = FlatStyle.Flat;
+            btnRefrescarGrilla.Font = new Font("Segoe UI", 9.75F);
+            btnRefrescarGrilla.ForeColor = Color.White;
+            btnRefrescarGrilla.Location = new Point(706, 64);
+            btnRefrescarGrilla.Name = "btnRefrescarGrilla";
+            btnRefrescarGrilla.Size = new Size(109, 30);
+            btnRefrescarGrilla.TabIndex = 55;
+            btnRefrescarGrilla.Text = "Refrescar Grilla";
+            btnRefrescarGrilla.UseVisualStyleBackColor = false;
+            btnRefrescarGrilla.Click += btnRefrescarGrilla_Click;
             // 
             // btnCerrar
             // 
@@ -111,13 +128,13 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(btnBuscarFiltrado);
+            groupBox1.Controls.Add(cmbNombreUsuarios);
+            groupBox1.Controls.Add(btnBuscar);
             groupBox1.Controls.Add(cmbCargarEstadoUsuario);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(cmbCargarGrupos);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(txtNombreUsuario);
             groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(12, 109);
@@ -127,24 +144,33 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtros";
             // 
-            // btnBuscarFiltrado
+            // cmbNombreUsuarios
             // 
-            btnBuscarFiltrado.BackColor = Color.Black;
-            btnBuscarFiltrado.FlatStyle = FlatStyle.Flat;
-            btnBuscarFiltrado.Font = new Font("Segoe UI", 9.75F);
-            btnBuscarFiltrado.ForeColor = Color.White;
-            btnBuscarFiltrado.IconChar = FontAwesome.Sharp.IconChar.Search;
-            btnBuscarFiltrado.IconColor = Color.White;
-            btnBuscarFiltrado.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBuscarFiltrado.IconSize = 20;
-            btnBuscarFiltrado.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBuscarFiltrado.Location = new Point(696, 24);
-            btnBuscarFiltrado.Name = "btnBuscarFiltrado";
-            btnBuscarFiltrado.Size = new Size(80, 33);
-            btnBuscarFiltrado.TabIndex = 18;
-            btnBuscarFiltrado.Text = "Buscar";
-            btnBuscarFiltrado.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBuscarFiltrado.UseVisualStyleBackColor = false;
+            cmbNombreUsuarios.FormattingEnabled = true;
+            cmbNombreUsuarios.Location = new Point(87, 27);
+            cmbNombreUsuarios.Name = "cmbNombreUsuarios";
+            cmbNombreUsuarios.Size = new Size(165, 28);
+            cmbNombreUsuarios.TabIndex = 62;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.BackColor = Color.Black;
+            btnBuscar.FlatStyle = FlatStyle.Flat;
+            btnBuscar.Font = new Font("Segoe UI", 9.75F);
+            btnBuscar.ForeColor = Color.White;
+            btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btnBuscar.IconColor = Color.White;
+            btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnBuscar.IconSize = 20;
+            btnBuscar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBuscar.Location = new Point(696, 24);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(80, 33);
+            btnBuscar.TabIndex = 18;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // cmbCargarEstadoUsuario
             // 
@@ -194,13 +220,6 @@
             label6.Size = new Size(68, 18);
             label6.TabIndex = 56;
             label6.Text = "Nombre:";
-            // 
-            // txtNombreUsuario
-            // 
-            txtNombreUsuario.Location = new Point(92, 27);
-            txtNombreUsuario.Name = "txtNombreUsuario";
-            txtNombreUsuario.Size = new Size(149, 27);
-            txtNombreUsuario.TabIndex = 55;
             // 
             // dgvGestionarUsuarios
             // 
@@ -266,12 +285,34 @@
             btnResetearUsuario.UseVisualStyleBackColor = false;
             btnResetearUsuario.Click += btnResetearUsuario_Click;
             // 
+            // btnSalir
+            // 
+            btnSalir.BackColor = Color.Black;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.Font = new Font("Microsoft Sans Serif", 11.25F);
+            btnSalir.ForeColor = Color.White;
+            btnSalir.IconChar = FontAwesome.Sharp.IconChar.Close;
+            btnSalir.IconColor = Color.Red;
+            btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSalir.IconSize = 20;
+            btnSalir.ImageAlign = ContentAlignment.MiddleRight;
+            btnSalir.Location = new Point(658, 376);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Padding = new Padding(0, 0, 8, 0);
+            btnSalir.Size = new Size(148, 34);
+            btnSalir.TabIndex = 38;
+            btnSalir.Text = "Salir";
+            btnSalir.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
+            // 
             // formGestionarUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(70, 89, 109);
             ClientSize = new Size(818, 417);
+            Controls.Add(btnSalir);
             Controls.Add(btnResetearUsuario);
             Controls.Add(btnEliminarUsuario);
             Controls.Add(btnModificarUsuario);
@@ -302,17 +343,19 @@
         private PictureBox pictureBox1;
         private GroupBox groupBox1;
         private Label label6;
-        private TextBox txtNombreUsuario;
         private ComboBox cmbCargarEstadoUsuario;
         private Label label4;
         private ComboBox cmbCargarGrupos;
         private Label label1;
-        private FontAwesome.Sharp.IconButton btnBuscarFiltrado;
+        private FontAwesome.Sharp.IconButton btnBuscar;
         private DataGridView dgvGestionarUsuarios;
         private Button btnEliminarUsuario;
         private Button btnModificarUsuario;
         private Button btnAgregarUsuario;
         private Button btnResetearUsuario;
         private FontAwesome.Sharp.IconButton btnCerrar;
+        private Button btnRefrescarGrilla;
+        private ComboBox cmbNombreUsuarios;
+        private FontAwesome.Sharp.IconButton btnSalir;
     }
 }

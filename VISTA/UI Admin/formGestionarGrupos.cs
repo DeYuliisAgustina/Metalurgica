@@ -24,6 +24,7 @@ namespace VISTA.UI_Admin
             InitializeComponent();
             dgvGestionarGrupos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             ActualizarGrilla();
+            CargarComboBoxes();
         }
 
         private void ActualizarGrilla()
@@ -35,6 +36,19 @@ namespace VISTA.UI_Admin
             //borro para prolijidad
             dgvGestionarGrupos.Columns["Asignado"].Visible = false;
             dgvGestionarGrupos.Columns["GrupoId"].Visible = false;
+        }
+
+        private void CargarComboBoxes()
+        {
+            // Cargar estados de grupo
+            cmbEstadosGrupo.Items.Clear();
+            var estadosGrupo = ControladoraSeguridad.Instancia.RecuperarEstadosGrupo();
+            cmbEstadosGrupo.Items.AddRange(estadosGrupo.Select(e => e.Nombre).ToArray());
+
+            // Cargar nombres de grupos
+            cmbNombreGrupos.Items.Clear();
+            var grupos = ControladoraSeguridad.Instancia.RecuperarGrupos();
+            cmbNombreGrupos.Items.AddRange(grupos.Select(g => g.Nombre).ToArray());
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -88,6 +102,66 @@ namespace VISTA.UI_Admin
         private void formGestionarGrupos_Load(object sender, EventArgs e)
         {
             ActualizarGrilla();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            //pregunto si desea salir
+            var confirmacion = MessageBox.Show("¿Está seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirmacion == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void RealizarBusqueda()
+        {
+            var grupos = ControladoraSeguridad.Instancia.RecuperarGrupos().ToList();
+
+            // Filtro por nombre de grupo
+            if (!string.IsNullOrEmpty(cmbNombreGrupos.Text))
+            {
+                grupos = grupos.Where(g => g.Nombre.ToLower().Contains(cmbNombreGrupos.Text.ToLower())).ToList();
+            }
+
+            // Filtro por estado de grupo
+            if (!string.IsNullOrEmpty(cmbEstadosGrupo.Text))
+            {
+                grupos = grupos.Where(g => g.EstadoGrupo != null && g.EstadoGrupo.Nombre == cmbEstadosGrupo.Text).ToList();
+            }
+
+            // Verificar si se encontraron resultados
+            if (grupos.Count == 0)
+            {
+                string mensaje = "No se encontraron grupos con los filtros seleccionados.";
+                MessageBox.Show(mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvGestionarGrupos.DataSource = null;
+                return;
+            }
+
+            dgvGestionarGrupos.DataSource = null;
+            dgvGestionarGrupos.DataSource = grupos;
+
+            // Ocultar columnas para prolijidad
+            dgvGestionarGrupos.Columns["Asignado"].Visible = false;
+            dgvGestionarGrupos.Columns["GrupoId"].Visible = false;
+        }
+
+        private void LimpiarFiltros()
+        {
+            cmbNombreGrupos.SelectedIndex = -1;
+            cmbEstadosGrupo.SelectedIndex = -1;
+        }
+
+        private void btnRefrescarGrilla_Click(object sender, EventArgs e)
+        {
+            LimpiarFiltros();
+            ActualizarGrilla();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            RealizarBusqueda();
         }
     }
 }

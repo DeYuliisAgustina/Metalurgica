@@ -33,12 +33,13 @@
             btnAgregarGrupo = new Button();
             dgvGestionarGrupos = new DataGridView();
             groupBox1 = new GroupBox();
+            cmbEstadosGrupo = new ComboBox();
+            cmbNombreGrupos = new ComboBox();
             btnBuscar = new FontAwesome.Sharp.IconButton();
-            cmbCargarEstadoGrupo = new ComboBox();
             label4 = new Label();
             label6 = new Label();
-            txtNombreGrupo = new TextBox();
             panel1 = new Panel();
+            btnRefrescarGrilla = new Button();
             btnCerrar = new FontAwesome.Sharp.IconButton();
             label3 = new Label();
             label2 = new Label();
@@ -102,11 +103,11 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(cmbEstadosGrupo);
+            groupBox1.Controls.Add(cmbNombreGrupos);
             groupBox1.Controls.Add(btnBuscar);
-            groupBox1.Controls.Add(cmbCargarEstadoGrupo);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(txtNombreGrupo);
             groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(13, 110);
@@ -115,6 +116,22 @@
             groupBox1.TabIndex = 32;
             groupBox1.TabStop = false;
             groupBox1.Text = "Filtros";
+            // 
+            // cmbEstadosGrupo
+            // 
+            cmbEstadosGrupo.FormattingEnabled = true;
+            cmbEstadosGrupo.Location = new Point(429, 26);
+            cmbEstadosGrupo.Name = "cmbEstadosGrupo";
+            cmbEstadosGrupo.Size = new Size(214, 28);
+            cmbEstadosGrupo.TabIndex = 62;
+            // 
+            // cmbNombreGrupos
+            // 
+            cmbNombreGrupos.FormattingEnabled = true;
+            cmbNombreGrupos.Location = new Point(95, 27);
+            cmbNombreGrupos.Name = "cmbNombreGrupos";
+            cmbNombreGrupos.Size = new Size(214, 28);
+            cmbNombreGrupos.TabIndex = 61;
             // 
             // btnBuscar
             // 
@@ -134,15 +151,7 @@
             btnBuscar.TextAlign = ContentAlignment.MiddleRight;
             btnBuscar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // cmbCargarEstadoGrupo
-            // 
-            cmbCargarEstadoGrupo.DropDownStyle = ComboBoxStyle.Simple;
-            cmbCargarEstadoGrupo.FormattingEnabled = true;
-            cmbCargarEstadoGrupo.Location = new Point(422, 27);
-            cmbCargarEstadoGrupo.Name = "cmbCargarEstadoGrupo";
-            cmbCargarEstadoGrupo.Size = new Size(179, 28);
-            cmbCargarEstadoGrupo.TabIndex = 61;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // label4
             // 
@@ -166,16 +175,10 @@
             label6.TabIndex = 56;
             label6.Text = "Nombre:";
             // 
-            // txtNombreGrupo
-            // 
-            txtNombreGrupo.Location = new Point(92, 27);
-            txtNombreGrupo.Name = "txtNombreGrupo";
-            txtNombreGrupo.Size = new Size(235, 27);
-            txtNombreGrupo.TabIndex = 55;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(45, 64, 84);
+            panel1.Controls.Add(btnRefrescarGrilla);
             panel1.Controls.Add(btnCerrar);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -184,6 +187,20 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(829, 104);
             panel1.TabIndex = 31;
+            // 
+            // btnRefrescarGrilla
+            // 
+            btnRefrescarGrilla.BackColor = Color.Black;
+            btnRefrescarGrilla.FlatStyle = FlatStyle.Flat;
+            btnRefrescarGrilla.Font = new Font("Segoe UI", 9.75F);
+            btnRefrescarGrilla.ForeColor = Color.White;
+            btnRefrescarGrilla.Location = new Point(706, 65);
+            btnRefrescarGrilla.Name = "btnRefrescarGrilla";
+            btnRefrescarGrilla.Size = new Size(109, 30);
+            btnRefrescarGrilla.TabIndex = 56;
+            btnRefrescarGrilla.Text = "Refrescar Grilla";
+            btnRefrescarGrilla.UseVisualStyleBackColor = false;
+            btnRefrescarGrilla.Click += btnRefrescarGrilla_Click;
             // 
             // btnCerrar
             // 
@@ -249,6 +266,7 @@
             btnSalir.Text = "Salir";
             btnSalir.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // formGestionarGrupos
             // 
@@ -285,15 +303,16 @@
         private DataGridView dgvGestionarGrupos;
         private GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton btnBuscar;
-        private ComboBox cmbCargarEstadoGrupo;
         private Label label4;
         private Label label6;
-        private TextBox txtNombreGrupo;
         private Panel panel1;
         private FontAwesome.Sharp.IconButton btnCerrar;
         private Label label3;
         private Label label2;
         private PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton btnSalir;
+        private ComboBox cmbEstadosGrupo;
+        private ComboBox cmbNombreGrupos;
+        private Button btnRefrescarGrilla;
     }
 }
