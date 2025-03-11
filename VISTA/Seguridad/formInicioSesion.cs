@@ -26,7 +26,7 @@ namespace VISTA
             InitializeComponent();
         }
 
-
+        int bandera = 1;
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -103,6 +103,24 @@ namespace VISTA
             loginForm.Show();
             this.Close();
 
+        }
+
+        private void btnOjoAbiertoCerrado_Click(object sender, EventArgs e)
+        {
+            if (bandera == 0)
+            {
+                btnOjoAbiertoCerrado.BackgroundImage = Properties.Resources.OjoCerrado;
+                txtClave.UseSystemPasswordChar = true;
+                bandera = 1;
+
+            }
+            else
+            {
+                btnOjoAbiertoCerrado.BackgroundImage = Properties.Resources.OjoAbierto;
+                txtClave.UseSystemPasswordChar = false;
+                bandera = 0;
+
+            }
         }
     }
 }

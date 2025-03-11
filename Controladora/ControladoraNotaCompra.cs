@@ -98,7 +98,6 @@ namespace Controladora
         {
             try
             {
-                // First check if the provider exists and is active
                 var proveedor = Context.Instancia.Proveedores.FirstOrDefault(p => p.ProveedorId == notaCompra.ProveedorId);
                 if (proveedor == null || !proveedor.Activo)
                 {

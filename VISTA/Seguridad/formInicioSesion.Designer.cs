@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnOjoAbiertoCerrado = new Button();
             materialDivider1 = new ReaLTaiizor.Controls.MaterialDivider();
             lblOlvidarContraseña = new ReaLTaiizor.Controls.DungeonLinkLabel();
             btnIniciarSesion = new Button();
@@ -46,14 +46,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnOjoAbiertoCerrado
             // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(629, 165);
-            button1.Name = "button1";
-            button1.Size = new Size(24, 23);
-            button1.TabIndex = 31;
-            button1.UseVisualStyleBackColor = true;
+            btnOjoAbiertoCerrado.BackgroundImage = Properties.Resources.OjoCerrado;
+            btnOjoAbiertoCerrado.FlatStyle = FlatStyle.Flat;
+            btnOjoAbiertoCerrado.Location = new Point(629, 165);
+            btnOjoAbiertoCerrado.Name = "btnOjoAbiertoCerrado";
+            btnOjoAbiertoCerrado.Size = new Size(24, 23);
+            btnOjoAbiertoCerrado.TabIndex = 31;
+            btnOjoAbiertoCerrado.UseVisualStyleBackColor = true;
+            btnOjoAbiertoCerrado.Click += btnOjoAbiertoCerrado_Click;
             // 
             // materialDivider1
             // 
@@ -203,7 +205,7 @@
             BackColor = Color.FromArgb(230, 235, 240);
             ClientSize = new Size(725, 360);
             Controls.Add(btnCerrar);
-            Controls.Add(button1);
+            Controls.Add(btnOjoAbiertoCerrado);
             Controls.Add(materialDivider1);
             Controls.Add(lblOlvidarContraseña);
             Controls.Add(btnIniciarSesion);
@@ -227,7 +229,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnOjoAbiertoCerrado;
         private ReaLTaiizor.Controls.MaterialDivider materialDivider1;
         private ReaLTaiizor.Controls.DungeonLinkLabel lblOlvidarContraseña;
         private Button btnIniciarSesion;
