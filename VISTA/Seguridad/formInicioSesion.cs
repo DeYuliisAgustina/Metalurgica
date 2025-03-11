@@ -24,6 +24,7 @@ namespace VISTA
         public formInicioSesion()
         {
             InitializeComponent();
+            txtClave.UseSystemPasswordChar = true;
         }
 
         int bandera = 1;

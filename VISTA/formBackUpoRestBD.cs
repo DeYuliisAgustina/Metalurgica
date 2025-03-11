@@ -212,12 +212,12 @@ namespace VISTA
 
                     // Cerrar todas las conexiones a la base de datos Metalurgica
                     string killQuery = @"
-                        DECLARE @kill varchar(8000) = '';
-                        SELECT @kill = @kill + 'kill ' + CONVERT(varchar(5), session_id) + ';'
-                        FROM sys.dm_exec_sessions
-                        WHERE database_id = DB_ID('Metalurgica')
-                        AND session_id <> @@SPID;
-                        EXEC(@kill);";
+                DECLARE @kill varchar(8000) = '';
+                SELECT @kill = @kill + 'kill ' + CONVERT(varchar(5), session_id) + ';'
+                FROM sys.dm_exec_sessions
+                WHERE database_id = DB_ID('Metalurgica')
+                AND session_id <> @@SPID;
+                EXEC(@kill);";
 
                     using (SqlCommand killCommand = new SqlCommand(killQuery, connection))
                     {
@@ -231,8 +231,36 @@ namespace VISTA
                         singleUserCommand.ExecuteNonQuery();
                     }
 
-                    // Restaurar la base de datos
-                    string restoreQuery = $"RESTORE DATABASE [Metalurgica] FROM DISK = N'{path}' WITH REPLACE, STATS = 10";
+                    // Obtener la ruta de datos predeterminada de SQL Server
+                    string defaultDataPath = string.Empty;
+                    string defaultLogPath = string.Empty;
+
+                    string pathQuery = "SELECT SERVERPROPERTY('InstanceDefaultDataPath') AS DataPath, SERVERPROPERTY('InstanceDefaultLogPath') AS LogPath";
+                    using (SqlCommand pathCommand = new SqlCommand(pathQuery, connection))
+                    {
+                        using (SqlDataReader reader = pathCommand.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                defaultDataPath = reader["DataPath"].ToString();
+                                defaultLogPath = reader["LogPath"].ToString();
+                            }
+                        }
+                    }
+
+                    // Si no se pueden obtener las rutas predeterminadas, usar rutas alternativas
+                    if (string.IsNullOrEmpty(defaultDataPath))
+                    {
+                        defaultDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Microsoft\Microsoft SQL Server Local DB\Instances\MSSQLLocalDB\";
+                        defaultLogPath = defaultDataPath;
+                    }
+
+                    // Restaurar la base de datos con MOVE para especificar nuevas ubicaciones
+                    string restoreQuery = $@"RESTORE DATABASE [Metalurgica] FROM DISK = N'{path}' 
+                WITH MOVE 'Metalurgica' TO '{Path.Combine(defaultDataPath, "Metalurgica.mdf")}',
+                MOVE 'Metalurgica_log' TO '{Path.Combine(defaultLogPath, "Metalurgica_log.ldf")}',
+                REPLACE, STATS = 10";
+
                     using (SqlCommand restoreCommand = new SqlCommand(restoreQuery, connection))
                     {
                         restoreCommand.CommandTimeout = 300; // 5 minutos de timeout para operaciones grandes
